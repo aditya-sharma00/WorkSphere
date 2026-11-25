@@ -1,219 +1,56 @@
-# WorkSphere – Smart Workplace & Workforce Management Platform
+# Welcome to your Expo app 👋
 
-**One Workplace. Everything Connected.**
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-WorkSphere is an all-in-one workplace management platform designed to simplify how organizations manage employees, attendance, shifts, communication, meetings, tasks, and daily operations.
+## Get started
 
-The platform aims to bring essential workplace activities into a single connected ecosystem, helping businesses improve workforce efficiency, team collaboration, and organizational productivity.
+1. Install dependencies
 
-## Overview
+   ```bash
+   npm install
+   ```
 
-Managing employees and daily office operations across multiple applications can become complicated. WorkSphere aims to solve this by providing a unified platform where employees, managers, HR teams, and administrators can work together seamlessly.
+2. Start the app
 
-From GPS-based attendance and shift scheduling to team messaging and meeting management, WorkSphere brings everything together in one place.
+   ```bash
+   npx expo start
+   ```
 
-## Key Features
+In the output, you'll find options to open the app in a
 
-### 1. Employee & Organization Management
-- Employee profiles and directory.
-- Department and designation management.
-- Organization hierarchy.
-- Employee onboarding and offboarding.
-- Role-based access and permissions.
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-### 2. Smart Attendance Management
-- GPS-based check-in and check-out.
-- Location-based attendance verification.
-- Geofencing.
-- QR code-based attendance.
-- Break and working-hour tracking.
-- Late arrival and early departure tracking.
-- Attendance history and reports.
+You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-### 3. Shift & Workforce Scheduling
-- Create and manage employee shifts.
-- Assign employees to shifts.
-- Rotational shift scheduling.
-- Weekly and monthly shift calendars.
-- Shift swap requests.
-- Shift conflict detection.
-- Manager approvals.
+## Get a fresh project
 
-### 4. Team Communication
-- One-to-one messaging.
-- Group conversations.
-- Department-based channels.
-- Company-wide announcements.
-- Image and document sharing.
-- Message replies and reactions.
-- Real-time messaging and notifications.
+When you're ready, run:
 
-### 5. Meetings & Calendar Management
-- Schedule and manage meetings.
-- Invite employees and teams.
-- Meeting reminders.
-- Meeting agendas.
-- Meeting notes and action items.
-- Meeting attendance tracking.
-- Calendar management.
-
-### 6. Task & Work Management
-- Create and assign tasks.
-- Task priorities and deadlines.
-- Subtasks and attachments.
-- Task status tracking.
-- Team task boards.
-- Progress monitoring.
-
-### 7. Leave & Holiday Management
-- Employee leave applications.
-- Leave balance tracking.
-- Leave approval workflows.
-- Holiday calendar.
-- Compensatory leave management.
-- Leave history and reports.
-
-### 8. Notifications & Analytics
-- Real-time notifications.
-- Push notifications.
-- Attendance analytics.
-- Workforce reports.
-- Department-wise statistics.
-- Shift coverage reports.
-- Task completion insights.
-
-## Technology Stack
-
-| Component | Technology |
-|---|---|
-| Web Application | Angular |
-| Mobile Application | Ionic + Angular + Capacitor |
-| Backend | ASP.NET Core Web API |
-| Programming Language | C# |
-| Framework | .NET 10 |
-| Database | Microsoft SQL Server |
-| ORM | Entity Framework Core |
-| Authentication | JWT & Refresh Tokens |
-| Real-time Communication | SignalR |
-| Push Notifications | Firebase Cloud Messaging |
-| Cloud Storage | Azure Blob Storage |
-| API Documentation | Swagger / OpenAPI |
-| Version Control | Git & GitHub |
-| Containerization | Docker |
-
-## System Architecture
-
-```text
-                  WorkSphere Platform
-                          |
-             +------------+------------+
-             |                         |
-       Admin Web Portal          Employee Mobile App
-          (Angular)              (Ionic + Angular)
-             |                         |
-             +------------+------------+
-                          |
-                 ASP.NET Core Web API
-                          |
-          +---------------+----------------+
-          |               |                |
-      Authentication   Business Logic    SignalR
-          |               |                |
-          +---------------+----------------+
-                          |
-                   Entity Framework Core
-                          |
-                    SQL Server
-                          |
-              Cloud Storage & Services
+```bash
+npm run reset-project
 ```
 
-## Project Structure
+This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
 
-```text
-WorkSphere/
-│
-├── backend/
-│   ├── WorkSphere.API/
-│   ├── WorkSphere.Domain/
-│   ├── WorkSphere.Application/
-│   ├── WorkSphere.Infrastructure/
-│   ├── Modules/
-│   │   ├── Identity/
-│   │   ├── Organization/
-│   │   ├── Employees/
-│   │   ├── Attendance/
-│   │   ├── Shifts/
-│   │   ├── Leave/
-│   │   ├── Messaging/
-│   │   ├── Meetings/
-│   │   ├── Tasks/
-│   │   ├── Notifications/
-│   │   └── Reports/
-│   └── WorkSphere.Tests/
-│
-├── web/
-│   └── worksphere-admin/
-│
-├── mobile/
-│   └── worksphere-mobile/
-│
-├── docs/
-│
-└── README.md
-```
+### Other setup steps
 
-## User Roles
+- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
+- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
+- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
 
-| Role | Responsibilities |
-|---|---|
-| Super Admin | Platform and organization management |
-| Company Admin | Company configuration and employee management |
-| HR | Attendance, shifts, leave and employee operations |
-| Manager | Team scheduling, approvals and task management |
-| Employee | Attendance, messaging, meetings, tasks and leave |
+## Learn more
 
-## Development Approach
+To learn more about developing your project with Expo, look at the following resources:
 
-WorkSphere is being developed using a modular architecture, with independent business modules sharing a common backend and database.
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-Development will follow an incremental approach:
+## Join the community
 
-- **Phase 1:** Authentication, organization, employee management, attendance, shifts and leave.
-- **Phase 2:** Real-time messaging, groups, announcements and notifications.
-- **Phase 3:** Meetings, calendar, tasks and collaboration.
-- **Phase 4:** Advanced analytics, automation and integrations.
+Join our community of developers creating universal apps.
 
-## Getting Started
-
-Development setup instructions will be added as the backend, web and mobile applications become available.
-
-Planned prerequisites:
-
-- .NET 10 SDK
-- Node.js and npm
-- Angular CLI
-- Ionic CLI
-- SQL Server
-- Visual Studio / VS Code
-- Android Studio (for Android development)
-
-## Project Vision
-
-Our vision is to build a unified digital workplace where organizations can manage their entire workforce and daily operations through a single platform.
-
-WorkSphere aims to reduce operational complexity, improve employee collaboration, and create a more connected working environment.
-
-## Contributors
-
-Built collaboratively by two software developers with experience in .NET and Angular.
-
-## Project Status
-
-**Status:** In Development 🚧
-
-This project is under active development. Features, architecture, and documentation will evolve as the platform grows.
-
----
-
-*WorkSphere – Bringing the entire workplace together.*
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
